@@ -41,7 +41,7 @@ CGFloat const kCharCountTopMargin         = 15.0f;
 CGFloat const kButtonHeight               = 26.0f;
 CGFloat const kButtonTouchableOverlap     =  6.0f;
 CGFloat const kButtonRightMargin          = -2.0f;
-CGFloat const kButtonBottomMargin         =  8.0f;
+CGFloat const kButtonBottomMargin         = 13.0f;
 CGFloat const kUtilityButtonWidth         = 25.0f;
 CGFloat const kUtilityButtonHeight        = 25.0f;
 CGFloat const kUtilityButtonBottomMargin  =  9.0f;
@@ -638,7 +638,7 @@ static CGFloat kTextViewToSuperviewHeightDelta;
 }
 
 - (void)updateButtonEnabled {
-    BOOL enabled = [self isEnabled] && [[[self textView] text] length] > 0;
+    BOOL enabled = [self isEnabled] && [[[self textView] text] length] > 5;
     [[self button] setEnabled:enabled];
 }
 
