@@ -290,9 +290,14 @@ static CGFloat kTextViewToSuperviewHeightDelta;
 }
 
 @synthesize button = _button;
+
+- (UIButton*)createButton
+{
+    return [PHFComposeBarView_Button buttonWithType:UIButtonTypeCustom];
+}
 - (UIButton *)button {
     if (!_button) {
-        _button = [PHFComposeBarView_Button buttonWithType:UIButtonTypeCustom];
+        _button = [self createButton];
         CGRect frame = CGRectMake([self bounds].size.width - kHorizontalSpacing - kButtonRightMargin - kButtonTouchableOverlap,
                                   [self bounds].size.height - kButtonBottomMargin - kButtonHeight,
                                   2 * kButtonTouchableOverlap,

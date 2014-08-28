@@ -77,6 +77,9 @@ extern NSString *const PHFComposeBarViewFrameEndUserInfoKey;          // NSValue
 
 - (void)setText:(NSString *)text animated:(BOOL)animated;
 
+
+-(UIButton*) createButton;
+
 @end
 
 
